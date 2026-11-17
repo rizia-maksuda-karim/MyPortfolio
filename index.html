@@ -1,152 +1,565 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio -Adiba</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rizia Maksuda Karim — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
   <!-- NAV -->
-  <nav>
-    <a href="#home" class="nav-logo">ADIBA</a>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+  <nav id="navbar">
+    <a href="#home" class="nav-logo">Rizia<span>.</span></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
-  <!-- HOME -->
+  <!-- ══════════════ HERO ══════════════ -->
   <section id="home">
-    <div style="max-width: 860px;">
-      <p class="hero-tag">Available for work</p>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="noise"></div>
+
+    <!-- LEFT -->
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span> Open to opportunities
+      </div>
       <h1 class="hero-title">
-        Hi, I'm<br>
-        <em>RIZIA MAKSUDA KARIM </em>
+        <span class="line-wrap"><span class="reveal">Hi, I'm</span></span>
+        <span class="line-wrap"><span class="reveal delay-1"><em>Rizia Maksuda</em></span></span>
+        <span class="line-wrap"><span class="reveal delay-2"><em>Karim</em></span></span>
       </h1>
+      <div class="hero-roles">
+        <span class="role-chip"><i class="fas fa-code"></i> CSE Undergraduate</span>
+      </div>
       <p class="hero-sub">
-        I'm a Computer Science student and aspiring developer who loves building clean, functional web experiences. Passionate about code, design, and solving real problems.
+        I'm a Computer Science student who enjoys building things for the web —
+        from clean, responsive interfaces to full-stack applications. I care about
+        writing good code, thoughtful design, and solving real problems.
       </p>
-      <a href="#projects" class="btn-primary">See My Work</a>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">
+          <span>See My Projects</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn-ghost"><span>Contact Me</span></a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/rizia-maksuda-karim" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/rizia-maksuda-karim" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:riziamaksudakarim@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <!-- RIGHT — Photo -->
+    <div class="hero-photo-wrap">
+      <div class="photo-blob-bg"></div>
+      <div class="hero-photo-card">
+        <img src="photo.jfif" alt="Rizia Maksuda Karim" class="hero-photo" />
+      </div>
     </div>
   </section>
 
-  <!-- SKILLS -->
+  <!-- ══════════════ EDUCATION ══════════════ -->
+  <section id="education">
+    <div class="container">
+      <div class="section-label fade-up">01 — Education</div>
+      <h2 class="section-heading fade-up">
+        Academic <em>Journey</em>
+      </h2>
+      <div class="divider fade-up"></div>
+
+      <div class="edu-grid">
+
+        <!-- 01: B.Sc. in CSE -->
+        <div class="edu-card fade-up edu-highlight">
+          <div class="edu-top">
+            <div class="edu-icon-box">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <span class="edu-status running">
+              <span class="status-dot"></span> Currently Enrolled
+            </span>
+          </div>
+          <div class="edu-content">
+            <span class="edu-level">Undergraduate Degree</span>
+            <h3 class="edu-degree">B.Sc. in Computer Science &amp; Engineering</h3>
+            <h4 class="edu-institution">
+              <i class="fas fa-university"></i> Varendra University, Rajshahi
+            </h4>
+            <p class="edu-desc">
+              Currently pursuing my undergraduate studies with a comprehensive curriculum in Software Engineering, Data
+              Structures &amp; Algorithms, Database Systems, Network Security, and Artificial Intelligence. Currently
+              working on capstone research project: <strong>CyberGuard AI</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- 02: HSC -->
+        <div class="edu-card fade-up">
+          <div class="edu-top">
+            <div class="edu-icon-box">
+              <i class="fas fa-building-columns"></i>
+            </div>
+            <span class="edu-status completed">
+              <i class="fas fa-check"></i> Completed
+            </span>
+          </div>
+          <div class="edu-content">
+            <span class="edu-level">Higher Secondary</span>
+            <h3 class="edu-degree">Higher Secondary Certificate (HSC)</h3>
+            <h4 class="edu-institution">
+              <i class="fas fa-school"></i> Shahid A.H.M Kamaruzzaman Govt.Degree College, Rajshahi
+            </h4>
+
+          </div>
+        </div>
+
+        <!-- 03: SSC -->
+        <div class="edu-card fade-up">
+          <div class="edu-top">
+            <div class="edu-icon-box">
+              <i class="fas fa-award"></i>
+            </div>
+            <span class="edu-status completed">
+              <i class="fas fa-check"></i> Completed
+            </span>
+          </div>
+          <div class="edu-content">
+            <span class="edu-level">Secondary School</span>
+            <h3 class="edu-degree">Secondary School Certificate (SSC)</h3>
+            <h4 class="edu-institution">
+              <i class="fas fa-school"></i> Rajshahi Cantonment Board School &amp; College
+            </h4>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- ══════════════ SKILLS ══════════════ -->
   <section id="skills">
     <div class="container">
-      <div class="section-header">
-        <span class="section-num">01</span>
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="section-line"></div>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-box">
-          <p class="skill-category">Frontend</p>
-          <h3 class="skill-name">Web Development</h3>
-          <div class="skill-tags">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">PHP</span>
-            <span class="tag">JavaScript</span>
-          
+      <div class="section-label fade-up">02 — Skills</div>
+      <h2 class="section-heading fade-up">What I work with</h2>
+      <div class="divider fade-up"></div>
+
+      <div class="skills-layout">
+        <div class="skills-col">
+          <p class="col-title fade-up">Languages & Frameworks</p>
+          <div class="skill-rows">
+            <div class="skill-row fade-up">
+              <div class="sr-left">
+                <span class="sr-icon html"><i class="fab fa-html5"></i></span>
+                <span class="sr-name">HTML5</span>
+              </div>
+              <div class="sr-bar">
+                <div class="sr-fill" data-w="92"></div>
+              </div>
+              <span class="sr-pct">92%</span>
+            </div>
+            <div class="skill-row fade-up">
+              <div class="sr-left">
+                <span class="sr-icon css"><i class="fab fa-css3-alt"></i></span>
+                <span class="sr-name">CSS3</span>
+              </div>
+              <div class="sr-bar">
+                <div class="sr-fill" data-w="85"></div>
+              </div>
+              <span class="sr-pct">85%</span>
+            </div>
+            <div class="skill-row fade-up">
+              <div class="sr-left">
+                <span class="sr-icon js"><i class="fab fa-js-square"></i></span>
+                <span class="sr-name">JavaScript</span>
+              </div>
+              <div class="sr-bar">
+                <div class="sr-fill" data-w="75"></div>
+              </div>
+              <span class="sr-pct">75%</span>
+            </div>
+            <div class="skill-row fade-up">
+              <div class="sr-left">
+                <span class="sr-icon php"><i class="fab fa-php"></i></span>
+                <span class="sr-name">PHP</span>
+              </div>
+              <div class="sr-bar">
+                <div class="sr-fill" data-w="65"></div>
+              </div>
+              <span class="sr-pct">65%</span>
+            </div>
           </div>
         </div>
-      
-        <div class="skill-box">
-          <p class="skill-category">Tools</p>
-          <h3 class="skill-name">Dev Environment</h3>
-          <div class="skill-tags">
-            <span class="tag">Git</span>
-            <span class="tag">GitHub</span>
-            <span class="tag">VS Code</span>
-            <span class="tag">Figma</span>
+
+        <div class="skills-col">
+          <p class="col-title fade-up">Tools & Environment</p>
+          <div class="tools-wrap">
+            <div class="tool-pill fade-up">
+              <i class="fab fa-git-alt"></i> Git
+            </div>
+            <div class="tool-pill fade-up">
+              <i class="fab fa-github"></i> GitHub
+            </div>
+            <div class="tool-pill fade-up">
+              <i class="fas fa-code"></i> VS Code
+            </div>
+            <div class="tool-pill fade-up">
+              <i class="fab fa-figma"></i> Figma
+            </div>
+            <div class="tool-pill fade-up">
+              <i class="fas fa-terminal"></i> Terminal
+            </div>
+            <div class="tool-pill fade-up">
+              <i class="fas fa-database"></i> MySQL
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
+  <!-- ══════════════ PROJECTS ══════════════ -->
   <section id="projects">
     <div class="container">
-      <div class="section-header">
-        <span class="section-num">02</span>
-        <h2 class="section-title">Projects</h2>
-        <div class="section-line"></div>
+      <div class="section-label fade-up">03 — Projects</div>
+      <h2 class="section-heading fade-up">Selected work</h2>
+      <div class="divider fade-up"></div>
+
+      <div class="proj-list">
+
+        <!-- Project 01 — CyberGuard AI (Final Year · In Progress) -->
+        <div class="proj-item fade-up proj-featured">
+          <div class="proj-num">01</div>
+          <div class="proj-info">
+            <div class="proj-meta">
+              <div class="proj-cat-wrap">
+                <span class="proj-cat">Final Year Project</span>
+                <span class="proj-status-badge"><span class="status-dot"></span> In Progress</span>
+              </div>
+              <div class="proj-actions">
+                <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" title="Demo"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <h3 class="proj-name">CyberGuard AI</h3>
+            <p class="proj-desc">
+              A smart AI-powered security gateway and mobile control system that sits in front of a server as a shield.
+              Traditional firewalls and security systems fail because of three core problems — thousands of
+              false-positive alerts that hide real attacks, black-box AI that blocks traffic without explaining why, and
+              desktop-only control that leaves admins helpless during 3 AM incidents. CyberGuard AI solves all three at
+              once.
+            </p>
+
+            <div class="proj-features-grid">
+              <div class="pf-card">
+                <i class="fas fa-shield-alt"></i>
+                <div>
+                  <strong>Real-Time Detection</strong>
+                  <p>4 combined ML techniques detect intrusions with far fewer false positives</p>
+                </div>
+              </div>
+              <div class="pf-card">
+                <i class="fas fa-lightbulb"></i>
+                <div>
+                  <strong>Explainable AI (SHAP)</strong>
+                  <p>Human-readable explanations for every block decision — no more black-box guessing</p>
+                </div>
+              </div>
+              <div class="pf-card">
+                <i class="fas fa-mobile-alt"></i>
+                <div>
+                  <strong>Flutter Mobile App</strong>
+                  <p>Instant push alerts + one-tap attacker blocking from anywhere, anytime</p>
+                </div>
+              </div>
+              <div class="pf-card">
+                <i class="fas fa-network-wired"></i>
+                <div>
+                  <strong>Gateway Architecture</strong>
+                  <p>Transparent proxy layer — protects the main server without code changes</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="proj-tags" style="margin-top:20px;">
+              <span>Python</span><span>ML</span><span>SHAP</span><span>Flutter</span><span>Firebase</span><span>Network
+                Security</span><span>FastAPI</span>
+            </div>
+          </div>
+          <div class="proj-visual"
+            style="background:rgba(244,63,94,0.08); border-color:rgba(244,63,94,0.2); color:#f43f5e;">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+        </div>
+        <!-- Project 02 — DSP Stress Detection -->
+        <div class="proj-item fade-up">
+          <div class="proj-num">02</div>
+          <div class="proj-info">
+            <div class="proj-meta">
+              <div class="proj-cat-wrap">
+                <span class="proj-cat">Academic · DSP Course</span>
+              </div>
+              <div class="proj-actions">
+                <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" title="Report"><i class="fas fa-file-alt"></i></a>
+              </div>
+            </div>
+            <h3 class="proj-name">Stress Detection via Physiological Signals</h3>
+            <p class="proj-desc">
+              A Digital Signal Processing course project that detects human stress levels by analysing physiological
+              signals — including Heart Rate Variability (HRV), Galvanic Skin Response (GSR), and EEG data. Raw
+              biosignals are pre-processed with bandpass filtering and noise removal, then key time-domain and
+              frequency-domain features are extracted to classify stress vs. non-stress states using a machine-learning
+              classifier.
+            </p>
+            <div class="proj-highlights">
+              <div class="ph-item"><i class="fas fa-wave-square"></i> Signal filtering &amp; feature extraction</div>
+              <div class="ph-item"><i class="fas fa-heartbeat"></i> HRV &amp; GSR analysis</div>
+              <div class="ph-item"><i class="fas fa-brain"></i> ML-based stress classification</div>
+            </div>
+            <div class="proj-tags" style="margin-top:16px;">
+              <span>Python</span><span>NumPy</span><span>SciPy</span><span>Matplotlib</span><span>DSP</span><span>ML</span>
+            </div>
+          </div>
+          <div class="proj-visual"
+            style="background:rgba(34,211,238,0.08); border-color:rgba(34,211,238,0.2); color:#22d3ee;">
+            <i class="fas fa-wave-square"></i>
+          </div>
+        </div>
+
+        <!-- Project 03 — BookHaven -->
+        <div class="proj-item fade-up">
+          <div class="proj-num">03</div>
+          <div class="proj-info">
+            <div class="proj-meta">
+              <span class="proj-cat">Academic</span>
+              <div class="proj-actions">
+                <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" title="Live"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <h3 class="proj-name">BookHaven</h3>
+            <p class="proj-desc">An online bookstore with admin & user sections — manage inventory, browse books, and
+              handle orders seamlessly.</p>
+            <div class="proj-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span>
+            </div>
+          </div>
+          <div class="proj-visual">
+            <i class="fas fa-book-open"></i>
+          </div>
+        </div>
+
+        <!-- Project 04 — Flower Shop -->
+        <div class="proj-item fade-up">
+          <div class="proj-num">04</div>
+          <div class="proj-info">
+            <div class="proj-meta">
+              <span class="proj-cat">Personal</span>
+              <div class="proj-actions">
+                <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" title="Live"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <h3 class="proj-name">Flower Shop</h3>
+            <p class="proj-desc">A beautiful online flower shop with product listings, a shopping cart, and a clean
+              responsive design.</p>
+            <div class="proj-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+          <div class="proj-visual">
+            <i class="fas fa-seedling"></i>
+          </div>
+        </div>
+
+
+
       </div>
-      <div class="projects-grid">
-        <div class="project-card">
-          <p class="project-tag">Academic</p>
-          <h3 class="project-name">BookHaven</h3>
-          <p class="project-desc">An online book store. There Available an admin section user section</p>
-          <div class="project-tech">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
-          </div>
-          <a href="#" class="project-link">View Project →</a>
-        </div>
-        <div class="project-card">
-          <p class="project-tag">Personal</p>
-          <h3 class="project-name">Flower shop</h3>
-          <p class="project-desc">An online flower shop.</p>
-          <div class="project-tech">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JS</span>
-          </div>
-          <a href="#" class="project-link">View Project →</a>
-        </div>
+
+      <div class="proj-more fade-up">
+        <a href="https://github.com/rizia-maksuda-karim" target="_blank" class="btn-ghost">
+          <i class="fab fa-github"></i> <span>More on GitHub</span>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- ══════════════ CONTACT ══════════════ -->
   <section id="contact">
     <div class="container">
-      <div class="section-header">
-        <span class="section-num">03</span>
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="section-line"></div>
-      </div>
-      <div class="contact-inner">
-        <div>
-          <div class="contact-big">Let's<br><em>Connect</em></div>
-          <p class="contact-sub">Feel free to reach out for collaborations, opportunities, or just to say hello.</p>
+      <div class="section-label fade-up">04 — Contact</div>
+      <h2 class="section-heading fade-up">Let's <em>connect</em></h2>
+      <div class="divider fade-up"></div>
+
+      <div class="contact-layout">
+        <div class="contact-left fade-up">
+          <p class="contact-intro">
+            Open to collaborations, internships, and new opportunities. Feel free to reach out — I'd love to chat!
+          </p>
+          <div class="clinks">
+            <a href="mailto:riziamaksudakarim@gmail.com" class="clink">
+              <div class="clink-icon"><i class="fas fa-envelope"></i></div>
+              <div class="clink-text">
+                <span class="cl-label">Email</span>
+                <span class="cl-val">riziamaksudakarim@gmail.com</span>
+              </div>
+              <i class="fas fa-chevron-right clink-arr"></i>
+            </a>
+            <a href="https://github.com/rizia-maksuda-karim" target="_blank" class="clink">
+              <div class="clink-icon"><i class="fab fa-github"></i></div>
+              <div class="clink-text">
+                <span class="cl-label">GitHub</span>
+                <span class="cl-val">github.com/rizia-maksuda-karim</span>
+              </div>
+              <i class="fas fa-chevron-right clink-arr"></i>
+            </a>
+            <a href="https://linkedin.com/in/rizia-maksuda-karim" target="_blank" class="clink">
+              <div class="clink-icon"><i class="fab fa-linkedin-in"></i></div>
+              <div class="clink-text">
+                <span class="cl-label">LinkedIn</span>
+                <span class="cl-val">linkedin.com/in/rizia-maksuda-karim</span>
+              </div>
+              <i class="fas fa-chevron-right clink-arr"></i>
+            </a>
+          </div>
         </div>
-        <div class="contact-links">
-          <a href="mailto:riziamaksudakarim@gmail.com" class="contact-link-item">
-            <div>
-              <p class="link-label">Email</p>
-              <p class="link-value">riziamaksudakarim@gmail.com</p>
-            </div>
-          </a>
-          <a href="https://github.com/rizia-maksuda-karim" target="_blank" class="contact-link-item">
-            <div>
-              <p class="link-label">GitHub</p>
-              <p class="link-value">github.com/rizia-maksuda-karim</p>
-            </div>
-          </a>
-          <a href="https://linkedin.com/in/rizia-maksuda-karim" target="_blank" class="contact-link-item">
-            <div>
-              <p class="link-label">LinkedIn</p>
-              <p class="link-value">linkedin.com/in/rizia-maksuda-karim</p>
-            </div>
-          </a>
-        </div>
+
+        <form class="contact-form fade-up" id="cform">
+          <div class="fg">
+            <label>Your Name</label>
+            <input type="text" placeholder="Your full name" required />
+          </div>
+          <div class="fg">
+            <label>Email Address</label>
+            <input type="email" placeholder="hello@example.com" required />
+          </div>
+          <div class="fg">
+            <label>Message</label>
+            <textarea rows="5" placeholder="Hi Rizia, I'd like to…" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;gap:10px;">
+            Send Message <i class="fas fa-paper-plane"></i>
+          </button>
+          <p class="form-msg" id="fmsg"></p>
+        </form>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 RIZIA MAKSUDA KARIM. All rights reserved.</p>
+    <div class="footer-inner">
+      <span class="footer-logo">Rizia<span>.</span></span>
+      <span class="footer-copy">© 2026 Rizia Maksuda Karim</span>
+      <div class="fsoc">
+        <a href="https://github.com/rizia-maksuda-karim" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/rizia-maksuda-karim" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:riziamaksudakarim@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
   </footer>
 
+  <script>
+    /* ── Custom cursor ── */
+    const cur = document.getElementById('cursor');
+    const fol = document.getElementById('cursor-follower');
+    let mx = 0, my = 0, fx = 0, fy = 0;
+    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; cur.style.transform = `translate(${mx}px,${my}px)`; });
+    (function loop() { fx += (mx - fx) * 0.1; fy += (my - fy) * 0.1; fol.style.transform = `translate(${fx}px,${fy}px)`; requestAnimationFrame(loop); })();
+    document.querySelectorAll('a,button,.proj-item').forEach(el => {
+      el.addEventListener('mouseenter', () => { cur.classList.add('big'); fol.classList.add('big'); });
+      el.addEventListener('mouseleave', () => { cur.classList.remove('big'); fol.classList.remove('big'); });
+    });
+
+    /* ── Navbar ── */
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 60));
+
+    /* ── Hamburger ── */
+    const hbg = document.getElementById('hamburger');
+    const nl = document.getElementById('nav-links');
+    hbg.addEventListener('click', () => { hbg.classList.toggle('open'); nl.classList.toggle('open'); });
+    nl.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { hbg.classList.remove('open'); nl.classList.remove('open'); }));
+
+    /* ── Active nav ── */
+    const secs = document.querySelectorAll('section[id]');
+    const nls = document.querySelectorAll('.nav-link');
+    new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          nls.forEach(a => a.classList.remove('active'));
+          const a = document.querySelector(`.nav-link[href="#${e.target.id}"]`);
+          if (a) a.classList.add('active');
+        }
+      });
+    }, { threshold: 0.4 }).observe && secs.forEach(s => new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          nls.forEach(a => a.classList.remove('active'));
+          const a = document.querySelector(`.nav-link[href="#${e.target.id}"]`);
+          if (a) a.classList.add('active');
+        }
+      });
+    }, { threshold: 0.4 }).observe(s));
+
+    /* ── Fade-up ── */
+    const fo = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.12 });
+    document.querySelectorAll('.fade-up').forEach(el => fo.observe(el));
+
+    /* ── Skill bars ── */
+    const bo = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) e.target.querySelectorAll('.sr-fill').forEach(b => b.style.width = b.dataset.w + '%');
+    }), { threshold: 0.3 });
+    document.querySelectorAll('.skills-col').forEach(el => bo.observe(el));
+
+    /* ── Contact form ── */
+    document.getElementById('cform').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const m = document.getElementById('fmsg');
+      m.textContent = '✅ Message sent! I\'ll be in touch soon.';
+      m.classList.add('success');
+      this.reset();
+      setTimeout(() => { m.textContent = ''; m.classList.remove('success'); }, 5000);
+    });
+
+    /* ── Hero text reveal ── */
+    document.querySelectorAll('.reveal').forEach((el, i) => {
+      el.style.animationDelay = (i * 0.18 + 0.3) + 's';
+    });
+
+    /* ── Floating cards parallax ── */
+    document.addEventListener('mousemove', e => {
+      const cx = (e.clientX / window.innerWidth - 0.5) * 24;
+      const cy = (e.clientY / window.innerHeight - 0.5) * 24;
+      document.querySelectorAll('.float-card').forEach((c, i) => {
+        const d = (i + 1) * 0.5;
+        c.style.transform = `translate(${cx * d}px, ${cy * d}px)`;
+      });
+    });
+  </script>
 </body>
+
 </html>
